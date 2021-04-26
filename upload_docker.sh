@@ -5,11 +5,15 @@
 
 # Step 1:
 # Create dockerpath
-# dockerpath=<your docker ID/path>
+dockerpath=dinaeshaq/ml-dina
 
 # Step 2:  
 # Authenticate & tag
 echo "Docker ID and Image: $dockerpath"
+docker login
+docker tag ml-dina $dockerpath
 
 # Step 3:
 # Push image to a docker repository
+docker push $dockerpath
+
